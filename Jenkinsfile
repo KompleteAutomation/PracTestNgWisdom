@@ -38,8 +38,17 @@ pipeline{
 					echo "This is TEST with version as ${VERSION} and release as ${REL_VER}"
 				'''
 			}
-					}					
+					}	
+
+
+					
 		}
+		
+	post { 
+        always { 
+            cleanWs()
+        }
+    }	
 
 
 
